@@ -5,29 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Survey Form</title>
 </head>
 
 <body>
     <h1 id="title">Survey Form</h1>
-    <p id="description">We would like to take your time to anwer this questions.</p>
-    <form action="" id="survey-form">
-        <label for="name" id="name-label">Enter your Name: <input type="text" id="name" required
-                placeholder="name"></label>
-        <label for="email" id="email-label">Enter your Email: </label><input type="email" id="email" required
-            placeholder="email">
-        <label for="number" id="number-label">Enter your number: <input type="number" id="number" min="11" max="11"
-                placeholder="number"></label>
-        <select name="" id="dropdown">
-            <option value=""></option>
-            <option value=""></option>
+    <p id="description">We're always looking for ways to improve. Please take a moment to answer a few questions.</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name (required):</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        <br>
+        <label for="email" id="email-label">Email (required):</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        <br>
+        <label for="dropdown" id="dropdown-label">Select an option:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="option1">Option One</option>
+
+
+            <option value="option2">Option Two</option>
+
+
+            <option value="option3">Option Three</option>
+
+
         </select>
-        <input type="radio" value="6" name="radio">
-        <input type="radio" value="9" name="radio">
-        <input type="checkbox" value="6">
-        <input type="checkbox" value="9">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button id="submit">Submit</button>
+        <br>
+        <label>What is your opinion about the new X?</label>
+        <br>
+        <input type="radio" id="radio1" name="opinion" value="positive">
+        <label for="radio1">Positive</label>
+        <br>
+        <input type="radio" id="radio2" name="opinion" value="neutral">
+        <label for="radio2">Neutral</label>
+        <br>
+        <input type="radio" id="radio3" name="opinion" value="negative">
+        <label for="radio3">Negative</label>
+        <br>
+        <label for="checkboxes">Select all that apply:</label>
+        <br>
+        <input type="checkbox" id="checkbox1" name="checkboxes[]" value="checkbox1">
+        <label for="checkbox1">Checkbox One</label>
+        <br>
+        <input type="checkbox" id="checkbox2" name="checkboxes[]" value="checkbox2">
+        <label for="checkbox2">Checkbox Two</label>
+        <br>
+        <input type="checkbox" id="checkbox3" name="checkboxes[]" value="checkbox3">
+        <label for="checkbox3">Checkbox Three</label>
+        <br>
+        <label for="comments">Additional comments (optional):</label>
+        <br>
+        <textarea id="comments" name="comments" rows="5"
+            placeholder="Please share any additional thoughts you have"></textarea>
+        <br>
+        <button id="submit" type="submit">Submit</button>
     </form>
 </body>
 
